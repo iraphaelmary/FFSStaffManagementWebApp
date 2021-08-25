@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" src="chart.min.js"></script>
+    </head>
+    <body>
+       
+        <section class="update">
+            <div class="recent-grid">
+                <div class="table-update">
+                    <!-- <caption>Staff Data Table</caption> -->
+                    <h1 class="overview-title">Staff Data</h1>
+                    <canvas id="speedChart" width="600" height="400"></canvas>
+                </div>
+
+                <aside class="aside">
+                    <div class="summary">
+                        <div class="summary-single">
+                            <span class="fas fa-briefcase fa-2x"></span>
+                            <div>
+                                <h5>staff Strength</h5>
+                                <big>7,651</big>
+                            </div>
+                        </div>
+                        <div class="summary-single">
+                            <span class="fas fa-truck fa-2x"></span>
+                            <div>
+                                <h5>total Appliances</h5>
+                                <big>182</big>
+                            </div>
+                        </div>
+                        <div class="summary-single">
+                            <span class="fas fa-home fa-2x"></span>
+                            <div>
+                                <h5>total Stations</h5>
+                                <big>351</big>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+    </body>
+
+    <script>
+
+var speedCanvas = document.getElementById("speedChart");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var speedData = {
+  labels: ['ASF II', 'ASF I', 'DSF', 'SF', 'CSF', 'ACF', 'DCF', 'CF', 'ACG'],
+  datasets: [{
+    label: "Male",
+    data: [122, 288, 395, 460, 550,665, 770, 888, 1000],
+  },
+    {
+    label: "female",
+    data: [110, 259, 375, 420, 520, 655, 740, 829, 988],   
+    }]
+};
+
+var chartOptions = {
+  legend: {
+    display: true,
+    position: 'top',
+    labels: {
+      boxWidth: 80,
+      fontColor: 'black'
+    }
+  }
+};
+
+var lineChart = new Chart(speedCanvas, {
+  type: 'line',
+  data: speedData,
+  options: chartOptions
+});
+
+        // let label_1 = ['ASF II', 'ASF I', 'DSF', 'SF', 'CSF', 'ACF', 'DCF', 'CF', 'ACG'];
+        // let myChart1 = document.getElementById('chart1').getContext('2d');
+        
+        // let mychart = new Chart(myChart1, {
+        //     type: 'radar',
+        //     data: {
+        //         labels: label_1,
+        //         datasets: [{
+        //                 label: 'Male',
+        //                     fill: true,
+        //                     backgroundColor: '#d62828',
+        //                     borderColor: '#f77f00',
+        //                     PointBorderColor: '#fcbf49',
+        //                     data: [324, 111, 288, 122, 444, 654, 188, 12, 8]
+        //             },
+        //             {
+        //                 label: 'female',
+        //                     fill: true,
+        //                     backgroundColor: '#ccc',
+        //                     borderColor: '#333',
+        //                     PointBorderColor: '#777',
+        //                     data: [124, 91, 88, 32, 324, 54, 18, 211, 5]
+        //         }]
+        //     },
+        //     options: {
+        //         title: {
+        //             title: "Gender Rank Distribution",
+        //             display: true
+        //         }
+        //     }
+        // });
+
+        // let label_2 = ['Male', 'Female'];
+        // let data_2 = [5271, 2281];
+        // let colors_2 = ['#49a9ea', '#36caab'];
+        // let bars = document.getElementById('bar').getContext('2d');
+
+        // let barData = new Chart(bars, {
+        //     type: 'bar',
+        //     data: {
+        //         labels: label_2,
+        //         datasets: [{
+        //             data: data_2,
+        //             backgroundColor: colors_2
+        //         }]
+        //     },
+        //     options: {
+        //         title: {
+        //             title: "Gender Distribution",
+        //             display: true
+        //         }
+        //     }
+        // })
+            
+    </script>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014) about:internet -->
+<html lang="en-US">
+<head>
+    <meta name="author" content="ralph.io" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="keywords" content="Personnel, Database, Management" />
+    <meta name="description" content="Personnel Integrated Database Management System" />
+    <meta name="revised" content="PIDMS - Beta, 28/11/2020" />
+    <meta name="robot" content="index,follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <script type="text/javascript" src="chart.min.js"></script>
+    <title>PIDMS-fedfire</title>
+</head>
+<body class="overlay-scrollbar">
+    <nav class="navbar">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="#" class="nav__link">
+                    <i class="fas fa-bars fa-2x" onclick="collapseSidebar()"></i>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">
+                    <div class="logo"></div>
+                </a>
+            </li>
+        </ul>
+        <form class="search__box" action="#" method="POST" enctype="multipart/form-data">
+            <input type="text" class="search__input" placeholder="Search..." name="search" />
+            <i class="fas fa-search fa-1x"></i>
+        </form>
+        <ul class="nav__list nav__right">
+            <li class="nav__item">
+                <a href="#" class="nav__link">
+                    <i class="fas fa-bell fa-2x"></i>
+                </a>
+                <div class="notification">16</div>
+            </li>
+            <li class="nav__item">
+                <div class="profile"></div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="sidebar-nav-item active">
+                <a href="#" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <span>Home</span>   
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <span>Tasks</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <span>Nominal Roll</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-audio-description"></i>
+                    </div>
+                    <span>Media</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span>Charts</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-signal"></i>
+                    </div>
+                    <span>Control</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-adjust"></i>
+                    </div>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="wrapper">
+        <div class="row">
+            <div class="col-4 col-sm-6 col-m-6">
+                <div class="counter one">
+                    <p><i class="fas fa-users fa-2x"></i></p>
+                    <h2>Staff in Post</h2>
+                    <h3>6,781</h3>
+                </div>
+            </div>
+            <div class="col-4 col-sm-6 col-m-6">
+                <div class="counter two">
+                    <p><i class="fas fa-star fa-2x"></i></p>
+                    <h2>Officers</h2>
+                    <h3>3,781</h3>
+                </div>
+            </div>
+            <div class="col-4 col-sm-6 col-m-6">
+                <div class="counter three">
+                    <p><i class="fas fa-bars fa-2x"></i></p>
+                    <h2>Rank &amp; File</h2>
+                    <h3>4,567</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 col-sm-6 col-m-6>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Fire Stations</h2>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="card-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Station</th>
+                                    <th>Address</th>
+                                    <th>Commanding Office</th>
+                                    <th>Contact No.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Control Room</td>
+                                    <td>Abuja, HQ</td>
+                                    <td>DSF White</td>
+                                    <td><span class="num">08032003557</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Wuse</td>
+                                    <td>Zone, 3</td>
+                                    <td>DSF Green</td>
+                                    <td><span class="num">09079378002</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>NASS</td>
+                                    <td>National Assembly</td>
+                                    <td>DSF Blue</td>
+                                    <td><span class="num">09079378003</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>State House</td>
+                                    <td>Villa/td>
+                                    <td>DSF Paul</td>
+                                    <td><span class="num">08032003599</span></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Nyanya</td>
+                                    <td>Abacha Barracks</td>
+                                    <td>DSF Grey</td>
+                                    <td><span class="num">08032008765</span></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Apo</td>
+                                    <td>Legistlative Qtrs</td>
+                                    <td>DSF Oranage</td>
+                                    <td><span class="num">08038803557</span></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>INEC</td>
+                                    <td>INEC, HQ</td>
+                                    <td>DSF Red</td>
+                                    <td><span class="num">08032003557</span></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Interior</td>
+                                    <td>FMI, Abuja</td>
+                                    <td>DSF Yellow</td>
+                                    <td><span class="num">08032000057</span></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Interior</td>
+                                    <td>FMI, Abuja</td>
+                                    <td>DSF Yellow</td>
+                                    <td><span class="num">08032000057</span></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Interior</td>
+                                    <td>FMI, Abuja</td>
+                                    <td>DSF Yellow</td>
+                                    <td><span class="num">08032000057</span></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Interior</td>
+                                    <td>FMI, Abuja</td>
+                                    <td>DSF Yellow</td>
+                                    <td><span class="num">08032000057</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+            <div class="col-4 col-sm-6 col-m-6">
+                    <div class="summary">
+                        <div class="summary-single">
+                            <span class="fas fa-briefcase fa-2x"></span>
+                            <div>
+                                <h5>staff Strength</h5>
+                                <big>7,651</big>
+                            </div>
+                        </div>
+                        <div class="summary-single">
+                            <span class="fas fa-truck fa-2x"></span>
+                            <div>
+                                <h5>total Male</h5>
+                                <big>5,182</big>
+                            </div>
+                        </div>
+                        <div class="summary-single">
+                            <span class="fas fa-home fa-2x"></span>
+                            <div>
+                                <h5>total Female</h5>
+                                <big>2,351</big>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>    
+        <div class="row chart">
+            <div class="col-12 col-sm-12 col-m-12">
+                <h1 class="overview-title">Rank Distribution</h1>
+                <canvas id="chart1" width="1200" height="500" class="col-12 col-sm-12 col-m-12"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    // var speedCanvas = document.getElementById("speedChart");
+    
+    Chart.defaults.global.defaultFontFamily = "Lato";
+    Chart.defaults.global.defaultFontSize = 18;
+    
+        var speedData = {
+            labels: ['ASF II', 'ASF I', 'DSF', 'SF', 'CSF', 'ACF', 'DCF', 'CF', 'ACG', 'CG'],
+            datasets: [{
+                label: "Male",
+                data: [122, 288, 395, 260, 450, 365, 170, 88, 10, 1],
+                fill: false,
+                borderColor: '#3e95cd',
+                backgroundColor: 'transparent',
+                borderDash: [3, 3],
+                pointBorderColor: 'blue',
+                pointBackgroundColor: 'rgba(255,150,0,0.5)',
+                pointRadius: 5,
+                pointHoverRadius: 10,
+                pointHitRadius: 30,
+                pointBorderWidth: 2,
+                pointStyle: 'rectRounded'
+            },
+                {
+                label: "female",
+                data: [110, 259, 175, 420, 220, 155, 40, 29, 4, ],
+                fill: false,
+                borderColor: '#c45850',
+                backgroundColor: 'transparent',
+                borderDash: [1, 1],
+                pointBorderColor: 'purple',
+                pointBackgroundColor: 'rgba(255,150,0,0.5)',
+                pointRadius: 5,
+                pointHoverRadius: 10,
+                pointHitRadius: 30,
+                pointBorderWidth: 2,
+                pointStyle: 'rectRounded'  
+                }]
+        };
+    
+        var chartOptions = {
+            legend: {
+                display: true,
+                position: 'top',
+                labels: {
+                    boxWidth: 50,
+                    fontColor: '#f77f00'
+                }
+            }
+        };
+    
+        var lineChart = new Chart(chart1, {
+            type: 'line',
+            data: speedData,
+            options: chartOptions
+        });
+</script>
+<script type="text/javascript" src="app.js"></script>
+</html>
+
+        

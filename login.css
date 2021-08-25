@@ -1,0 +1,145 @@
+/* LOGIN CSS 
+*  file: login.html
+*  Author: ralph.io
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.bgImage {
+    width: 50%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.bgImage img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.bgImage:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg, #ac0600, #16007a);
+    z-index: 1;
+    mix-blend-mode: multiply;
+    /* background-blend-mode: overlay; */
+}
+
+.formBox {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 50%;
+}
+
+.form h2 {
+    font-size: 2rem;
+    color: #faab00;
+    border-bottom: 2px solid #db2019;
+    border-radius: 5px;
+    /* display: inline-block; */
+    text-transform: uppercase;
+    padding: 5px 0;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.inputBox {
+    margin: 15px 0;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 13px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px #727475;
+    margin: 10px 0;
+}
+
+.inputBox span, .remember {
+    font-size: 1.2rem;
+    display: inline-block;
+    color: #727475;
+}
+
+.inputBox input[type="submit"] {
+    background-color: #df0a06;
+    color: #ececec;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* input::placeholder {
+    color: #b1b1b1;
+    font-weight: 100;
+    display: none;
+} */
+
+.inputBox input[type="submit"]:hover {
+    background-color: #fdfdfd;
+    transition: 200ms ease-in;
+    color: #db2019;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.remember input[type="checkbox"] {
+    margin-right: 10px;
+    box-shadow: 0 0 10px #8d8d8d;
+}
+
+@media only screen and (max-width: 768px) {
+    .bgImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .formBox {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
